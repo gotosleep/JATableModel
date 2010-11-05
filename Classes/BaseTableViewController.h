@@ -1,6 +1,5 @@
 //
 //  BaseTableViewController.h
-//  westcable
 //
 //  Created by Jesse Andersen on 12/3/09.
 //  Copyright 2009 Numjin. All rights reserved.

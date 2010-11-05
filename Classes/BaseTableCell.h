@@ -1,6 +1,5 @@
 //
 //  BaseTableCell.h
-//  Navi
 //
 //  Created by Jesse Andersen on 1/13/10.
 //  Copyright 2010 Numjin. All rights reserved.

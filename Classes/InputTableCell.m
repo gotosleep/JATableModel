@@ -1,13 +1,11 @@
 //
 //  InputTableCell.m
-//  Navi
 //
 //  Created by Jesse Andersen on 12/12/09.
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
 #import "InputTableCell.h"
-
 
 @implementation InputTableCell
 

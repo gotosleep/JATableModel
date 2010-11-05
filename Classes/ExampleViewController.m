@@ -28,10 +28,10 @@
 - (void)layoutTable {
 	SectionModel *section = [self.tableModel createSection];
 	section.headerText = @"Header Text";
-//	section.footerText = @"Footer Text";
+	section.footerText = @"Footer Text";
 	
 	BaseTableCellModel *row = nil;
-	
+		
 	SetupCell setup = ^(UITableViewCell * cell, UITableView * view, NSIndexPath * indexPath, UIViewController * controller) {
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	};
@@ -39,6 +39,7 @@
 		row = [section createRowWithStyle:UITableViewCellStyleValue1];
 		row.setupCellBlock = setup;
 		row.text = item;
+		row.detailText = @"blah";
 		
 		row.drilldown = ^(BaseTableCellModel * model) {
 		};

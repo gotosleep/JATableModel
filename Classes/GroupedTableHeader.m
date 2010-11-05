@@ -1,6 +1,5 @@
 //
 //  GroupedTableHeader.m
-//  Navi
 //
 //  Created by Jesse Andersen on 4/8/10.
 //  Copyright 2010 Numjin. All rights reserved.

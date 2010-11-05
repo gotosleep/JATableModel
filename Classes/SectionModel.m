@@ -1,6 +1,5 @@
 //
 //  SectionModel.m
-//  pcn
 //
 //  Created by Jesse Andersen on 2/4/10.
 //  Copyright 2010 Numjin. All rights reserved.

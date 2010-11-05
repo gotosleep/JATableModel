@@ -1,6 +1,5 @@
 //
 //  BaseTableViewController.m
-//  westcable
 //
 //  Created by Jesse Andersen on 12/3/09.
 //  Copyright 2009 Numjin. All rights reserved.
@@ -133,8 +132,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)sectionNum {
 	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
-	if (section && section.footerView) {
-		return section.footerView.frame.size.height;
+	if (section) {
+		if (section.footerView) {
+			return section.footerView.frame.size.height;
+		} else if (section.footerText) {
+			if (tableView.style == UITableViewStyleGrouped) {
+				return 35;
+			} else {
+				return 22;
+			}
+		}
 	}
 	return 0;
 }

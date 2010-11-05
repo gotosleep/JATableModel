@@ -1,6 +1,5 @@
 //
 //  UIView+West.m
-//  cvs-iphone
 //
 //  Created by Jesse Andersen on 5/17/10.
 //  Copyright 2010 Numjin. All rights reserved.

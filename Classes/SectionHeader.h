@@ -1,6 +1,5 @@
 //
 //  SectionHeader.h
-//  westcable
 //
 //  Created by Jesse Andersen on 11/20/09.
 //  Copyright 2009 Numjin. All rights reserved.

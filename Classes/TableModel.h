@@ -1,6 +1,5 @@
 //
 //  TableModel.h
-//  comcast-mobile-db
 //
 //  Created by Jesse Andersen on 6/17/10.
 //  Copyright 2010 Numjin. All rights reserved.

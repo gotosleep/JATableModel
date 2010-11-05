@@ -1,6 +1,5 @@
 //
 //  TableButtonModel.h
-//  westcable
 //
 //  Created by Jesse Andersen on 12/7/09.
 //  Copyright 2009 Numjin. All rights reserved.
