@@ -4,7 +4,6 @@
 //  Created by Jesse Andersen on 2/4/10.
 //  Copyright 2010 Numjin. All rights reserved.
 //
-
 #import "SectionModel.h"
 #import "BaseTableCellModel.h"
 #import "TableModel.h"
@@ -43,6 +42,7 @@
 
 - (BaseTableCellModel *)createRowWithStyle:(UITableViewCellStyle)style {
 	BaseTableCellModel *row = [[BaseTableCellModel alloc] init];
+	row.section = self;
 	row.style = style;
 	[self.rows addObject:row];
 	return [row autorelease];
@@ -56,6 +56,7 @@
 }
 
 - (BaseTableCellModel *)addRow:(BaseTableCellModel *)row {
+	row.section = self;
 	[self.rows addObject:row];
 	return row;
 }
@@ -67,10 +68,21 @@
 	return row;
 }
 
+- (void)reloadWithAnimation:(UITableViewRowAnimation)animation {
+	[self.tableModel reloadSection:self withAnimation:animation];
+}
+
 - (void)reloadRowAtIndex:(int)index withAnimation:(UITableViewRowAnimation)animation {
 	NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:_sectionNum];
 	NSArray *paths = [NSArray arrayWithObject:path];
 	[self.tableModel.tableView reloadRowsAtIndexPaths:paths withRowAnimation:animation];
+}
+
+- (void)reloadRow:(BaseTableCellModel *)row withAnimation:(UITableViewRowAnimation)animation {
+	int index = [self.rows indexOfObject:row];
+	if (index != NSNotFound) {
+		[self reloadRowAtIndex:index withAnimation:animation];
+	}
 }
 
 - (void)removeRowAtIndex:(NSUInteger)index {

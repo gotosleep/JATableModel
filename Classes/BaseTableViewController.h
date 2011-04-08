@@ -29,6 +29,11 @@
 #pragma mark -
 #pragma mark Displaying
 
-- (void)layoutTable;
+- (void)display;
+
+#pragma mark -
+#pragma mark Searching
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView;
 
 @end

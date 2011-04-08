@@ -37,12 +37,6 @@
 		input.label.text = self.text;
 		[input.textField removeTarget:nil action:@selector(inputCellTextFieldChanged:) forControlEvents:UIControlEventEditingChanged];
 		[input.textField addTarget:self action:@selector(inputCellTextFieldChanged:) forControlEvents:UIControlEventEditingChanged];
-//		if (self.autopopulateBlock) {
-//			self.autopopulateBlock(input.textField);
-//		} else {
-//			input.textField = nil;
-//		}
-
 	}	
 }
 

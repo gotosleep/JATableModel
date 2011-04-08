@@ -7,15 +7,16 @@
 
 #import "BaseTableCellModel.h"
 #import "BaseTableCell.h"
+#import "SectionModel.h"
 
 @implementation BaseTableCellModel
 
 @synthesize style = _style;
-
-//@synthesize setupCellBlock, setupNewCellBlock, drilldown;
 @synthesize setupNewCellBlock, drilldown;
-
 @synthesize text = _text, detailText = _detailText;
+@synthesize commitEditingBlock;
+@synthesize section = _section;
+@synthesize enabled = _enabled;
 
 + (id)model {
 	return [[[self alloc] init] autorelease];
@@ -52,14 +53,22 @@
 }
 
 - (void)dealloc {
+	_section = nil;
 	[_setupBlockHash release], _setupBlockHash = nil;
-	self.text = nil;
-	self.detailText = nil;
+	[commitEditingBlock release], commitEditingBlock = nil;
+	[_text release], _text = nil;
+	[_detailText release], _detailText = nil;
 	[setupCellBlock release], setupCellBlock = nil;
-	self.setupCellBlock = nil;
-	self.setupNewCellBlock = nil;
-	self.drilldown = nil;
+	[setupNewCellBlock release], setupNewCellBlock = nil;
+	[drilldown release], drilldown = nil;
 	[super dealloc];
+}
+
+- (id)init {
+	if (self = [super init]) {
+		_enabled = YES;
+	}
+	return self;
 }
 
 #pragma mark -
@@ -92,24 +101,34 @@
 #pragma mark Cell Creation & Fetching
 
 static NSString *CELL_IDENTIFIER = @"BaseTableCellModel";
++ (NSString *)identifier {
+	return CELL_IDENTIFIER;
+}
+
 - (NSString *)identifierInTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller {
-	NSMutableString *ident = [NSMutableString stringWithFormat:@"%@-%d", CELL_IDENTIFIER, self.style];
+	NSMutableString *ident = [NSMutableString stringWithFormat:@"%@-%d", [[self class] identifier], self.style];
 	if (_setupBlockHash) {
 		[ident appendFormat:@"-%@", _setupBlockHash];
 	}
+//	NSLog(@"Cell identifier: %@", ident);
 	return ident;
 }
 
 - (UITableViewCell *)createNewCellInTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller ident:(NSString *)ident {
-	return [[[BaseTableCell alloc] initWithStyle:self.style reuseIdentifier:ident] autorelease];	
+	return [[[BaseTableCell alloc] initWithStyle:self.style reuseIdentifier:ident] autorelease];
 }
 
-- (void)setupNewCell:(UITableViewCell *)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller {	
+- (void)setupNewCell:(UITableViewCell *)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller {
 }
 
 - (void)setupCell:(UITableViewCell*)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller {
 	cell.textLabel.text = self.text;
-	cell.detailTextLabel.text = self.detailText; 
+	cell.detailTextLabel.text = self.detailText;
+	if (self.drilldown) {
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+	} else {
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	}
 }
 
 - (CGFloat)heightInTable:(UITableView *)tableView {
@@ -137,6 +156,12 @@ static NSString *CELL_IDENTIFIER = @"BaseTableCellModel";
 		_setupBlockHash = nil;
 	}
 
+}
+
+#pragma mark Helper Methods
+
+- (void)reloadWithAnimation:(UITableViewRowAnimation)animation {
+	[self.section reloadRow:self withAnimation:animation];
 }
 
 @end

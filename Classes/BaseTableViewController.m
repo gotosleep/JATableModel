@@ -180,7 +180,7 @@
 			id row = [section.rows objectAtIndex:indexPath.row];
 			if ([row isKindOfClass:[BaseTableCellModel class]]) {
 				BaseTableCellModel *model = (BaseTableCellModel *)row;
-				if (model.drilldown) {
+				if (model.enabled && model.drilldown) {
 					model.drilldown(model);
 				}
 			}
@@ -197,6 +197,13 @@
 		SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
 		if (section) {
 			if (indexPath.row < [section.rows count]) {
+				id row = [section.rows objectAtIndex:indexPath.row];
+				if ([row isKindOfClass:[BaseTableCellModel class]]) {
+					BaseTableCellModel *model = (BaseTableCellModel *)row;
+					if (model.commitEditingBlock) {
+						model.commitEditingBlock(tableView, editingStyle, indexPath);
+					}
+				}
 				[section.rows removeObjectAtIndex:indexPath.row];
 				[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 			}
@@ -212,7 +219,7 @@
 #pragma mark -
 #pragma mark Displaying
 
-- (void)layoutTable {
+- (void)display {
 	//to be implemented by subclasses
 }
 

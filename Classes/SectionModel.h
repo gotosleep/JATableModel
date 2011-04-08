@@ -32,7 +32,9 @@
 - (BaseTableCellModel *)createRowWithStyle:(UITableViewCellStyle)style;
 - (BaseTableCellModel *)addRow:(BaseTableCellModel *)row;
 - (BaseTableCellModel *)addRow:(BaseTableCellModel *)row andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
+- (void)reloadWithAnimation:(UITableViewRowAnimation)animation;
 - (void)reloadRowAtIndex:(int)index withAnimation:(UITableViewRowAnimation)animation;
+- (void)reloadRow:(BaseTableCellModel *)row withAnimation:(UITableViewRowAnimation)animation;
 - (void)removeRowAtIndex:(NSUInteger)index;
 - (void)removeRowAtIndex:(NSUInteger)index andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
 - (void)removeAllRows;

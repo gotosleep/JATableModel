@@ -26,6 +26,8 @@
 		28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28D3F202112F7DC200FD0661 /* iOSTableModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* iOSTableModel.xcdatamodeld */; };
+		95076F9D134FA03A0033F13E /* TableTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95076F9C134FA03A0033F13E /* TableTextCellModel.m */; };
+		95B5CAA2134FA3C200AF3EAB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B5CAA1134FA3C200AF3EAB /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,9 @@
 		28A0AAE50D9B0CCF005BE974 /* iOSTableModel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSTableModel_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iOSTableModel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOSTableModel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		95076F9B134FA03A0033F13E /* TableTextCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTextCellModel.h; sourceTree = "<group>"; };
+		95076F9C134FA03A0033F13E /* TableTextCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTextCellModel.m; sourceTree = "<group>"; };
+		95B5CAA1134FA3C200AF3EAB /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,8 @@
 				02CB73EA126CF2AB003275AE /* SectionModel.m */,
 				02CB73EB126CF2AB003275AE /* BaseTableCellModel.h */,
 				02CB73EC126CF2AB003275AE /* BaseTableCellModel.m */,
+				95076F9B134FA03A0033F13E /* TableTextCellModel.h */,
+				95076F9C134FA03A0033F13E /* TableTextCellModel.m */,
 				02CB73ED126CF2AB003275AE /* InputCellModel.h */,
 				02CB73EE126CF2AB003275AE /* InputCellModel.m */,
 				02CB73EF126CF2AB003275AE /* TableModel.h */,
@@ -140,6 +147,7 @@
 				1D3623250D0F684500981E51 /* iOSTableModelAppDelegate.m */,
 				02CB7417126E06A7003275AE /* ExampleViewController.h */,
 				02CB7418126E06A7003275AE /* ExampleViewController.m */,
+				95B5CAA1134FA3C200AF3EAB /* MainWindow.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02CB7406126CF2AC003275AE /* InputTableCell.xib in Resources */,
+				95B5CAA2134FA3C200AF3EAB /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +280,7 @@
 				02CB740A126CF2AC003275AE /* GroupedTableHeader.m in Sources */,
 				02CB7419126E06A7003275AE /* ExampleViewController.m in Sources */,
 				02CB743A126E0BB6003275AE /* UIView+NumjinAdditions.m in Sources */,
+				95076F9D134FA03A0033F13E /* TableTextCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +297,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSTableModel_Prefix.pch;
 				INFOPLIST_FILE = "iOSTableModel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = iOSTableModel;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -299,7 +311,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSTableModel_Prefix.pch;
 				INFOPLIST_FILE = "iOSTableModel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = iOSTableModel;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -31,11 +31,11 @@
 #pragma mark Section Helpers
 
 - (SectionModel *)sectionAtIndex:(NSUInteger)index {
-	if (index < _sectionCount) {		
+	if (index < _sectionCount) {
 		id section = [_sections objectForKey:[NSNumber numberWithInt:index]];
 		if ([section isKindOfClass:[SectionModel class]]) {
 			return section;
-		} 
+		}
 	}
 	return nil;
 }
@@ -53,6 +53,17 @@
 	SectionModel *section = [self createSection];
 	[self.tableView insertSections:[NSIndexSet indexSetWithIndex:index] withRowAnimation:animation];
 	return section;
+}
+
+- (void)reloadSectionAtIndex:(NSUInteger)index withAnimation:(UITableViewRowAnimation)animation {
+	NSIndexSet *set = [[NSIndexSet alloc] initWithIndex:index];
+	[self.tableView reloadSections:set withRowAnimation:animation];
+	[set release];
+}
+
+
+- (void)reloadSection:(SectionModel *)section withAnimation:(UITableViewRowAnimation)animation {
+	[self reloadSectionAtIndex:section.sectionNum withAnimation:animation];
 }
 
 - (void)removeSectionAtIndex:(NSUInteger)index {
