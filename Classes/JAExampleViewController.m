@@ -8,7 +8,6 @@
 
 #import "JAExampleViewController.h"
 
-
 @implementation JAExampleViewController
 
 @synthesize data = _data;
@@ -40,7 +39,6 @@
         row.setupCellBlock = setup;
         row.text = item;
         row.detailText = @"blah";
-
         row.drilldown = ^(JARowModel *model) {
             NSString *msg = [NSString stringWithFormat:@"You clicked: %@!", item];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is easy." message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];

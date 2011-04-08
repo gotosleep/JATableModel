@@ -7,7 +7,7 @@ The UITableView is broken down into three basic data pieces:
 
 A custom UITableViewController subclass, JATableViewController, handles mapping UITableViewDelegate & UITableViewDataSource methods to the appropriate models. JATableModel makes creating tables in iOS quick and easy.
 
-How about an example?
+How about an example? (full example is included in the library)
 
 //
 //  ExampleViewController.h
@@ -37,7 +37,6 @@ How about an example?
 //
 
 #import "JAExampleViewController.h"
-
 
 @implementation JAExampleViewController
 
@@ -70,7 +69,6 @@ How about an example?
         row.setupCellBlock = setup;
         row.text = item;
         row.detailText = @"blah";
-
         row.drilldown = ^(JARowModel *model) {
             NSString *msg = [NSString stringWithFormat:@"You clicked: %@!", item];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is easy." message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
