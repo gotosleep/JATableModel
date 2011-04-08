@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02CB7401126CF2AC003275AE /* JASectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EA126CF2AB003275AE /* JASectionModel.m */; };
-		02CB7402126CF2AC003275AE /* JATableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EC126CF2AB003275AE /* JATableCellModel.m */; };
+		02CB7402126CF2AC003275AE /* JARowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EC126CF2AB003275AE /* JARowModel.m */; };
 		02CB7403126CF2AC003275AE /* JAInputCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EE126CF2AB003275AE /* JAInputCellModel.m */; };
 		02CB7404126CF2AC003275AE /* JATableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F0126CF2AB003275AE /* JATableModel.m */; };
 		02CB7405126CF2AC003275AE /* JATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F2126CF2AB003275AE /* JATableViewController.m */; };
@@ -33,8 +33,8 @@
 /* Begin PBXFileReference section */
 		02CB73E9126CF2AB003275AE /* JASectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASectionModel.h; sourceTree = "<group>"; };
 		02CB73EA126CF2AB003275AE /* JASectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASectionModel.m; sourceTree = "<group>"; };
-		02CB73EB126CF2AB003275AE /* JATableCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableCellModel.h; sourceTree = "<group>"; };
-		02CB73EC126CF2AB003275AE /* JATableCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JATableCellModel.m; sourceTree = "<group>"; };
+		02CB73EB126CF2AB003275AE /* JARowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARowModel.h; sourceTree = "<group>"; };
+		02CB73EC126CF2AB003275AE /* JARowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARowModel.m; sourceTree = "<group>"; };
 		02CB73ED126CF2AB003275AE /* JAInputCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAInputCellModel.h; sourceTree = "<group>"; };
 		02CB73EE126CF2AB003275AE /* JAInputCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAInputCellModel.m; sourceTree = "<group>"; };
 		02CB73EF126CF2AB003275AE /* JATableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableModel.h; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 				02CB73F3126CF2AB003275AE /* Views */,
 				02CB73E9126CF2AB003275AE /* JASectionModel.h */,
 				02CB73EA126CF2AB003275AE /* JASectionModel.m */,
-				02CB73EB126CF2AB003275AE /* JATableCellModel.h */,
-				02CB73EC126CF2AB003275AE /* JATableCellModel.m */,
+				02CB73EB126CF2AB003275AE /* JARowModel.h */,
+				02CB73EC126CF2AB003275AE /* JARowModel.m */,
 				95076F9B134FA03A0033F13E /* JATableTextCellModel.h */,
 				95076F9C134FA03A0033F13E /* JATableTextCellModel.m */,
 				02CB73ED126CF2AB003275AE /* JAInputCellModel.h */,
@@ -270,7 +270,7 @@
 				1D3623260D0F684500981E51 /* iOSTableModelAppDelegate.m in Sources */,
 				28D3F202112F7DC200FD0661 /* iOSTableModel.xcdatamodeld in Sources */,
 				02CB7401126CF2AC003275AE /* JASectionModel.m in Sources */,
-				02CB7402126CF2AC003275AE /* JATableCellModel.m in Sources */,
+				02CB7402126CF2AC003275AE /* JARowModel.m in Sources */,
 				02CB7403126CF2AC003275AE /* JAInputCellModel.m in Sources */,
 				02CB7404126CF2AC003275AE /* JATableModel.m in Sources */,
 				02CB7405126CF2AC003275AE /* JATableViewController.m in Sources */,

@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JATableCellModel.h"
+#import "JARowModel.h"
 
-@interface JATableTextCellModel : JATableCellModel {
+@interface JATableTextCellModel : JARowModel {
 	UIFont *_font;
 }
 

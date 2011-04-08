@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class JATableCellModel, JATableModel;
+@class JARowModel, JATableModel;
 
 @interface JASectionModel : NSObject {
 	NSMutableArray *_rows;
@@ -27,14 +27,14 @@
 @property (nonatomic, retain) NSString *headerText;
 @property (nonatomic, retain) NSString *footerText;
 
-- (JATableCellModel *)createRow;
-- (JATableCellModel *)createRowAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
-- (JATableCellModel *)createRowWithStyle:(UITableViewCellStyle)style;
-- (JATableCellModel *)addRow:(JATableCellModel *)row;
-- (JATableCellModel *)addRow:(JATableCellModel *)row andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
+- (JARowModel *)createRow;
+- (JARowModel *)createRowAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
+- (JARowModel *)createRowWithStyle:(UITableViewCellStyle)style;
+- (JARowModel *)addRow:(JARowModel *)row;
+- (JARowModel *)addRow:(JARowModel *)row andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
 - (void)reloadWithAnimation:(UITableViewRowAnimation)animation;
 - (void)reloadRowAtIndex:(int)index withAnimation:(UITableViewRowAnimation)animation;
-- (void)reloadRow:(JATableCellModel *)row withAnimation:(UITableViewRowAnimation)animation;
+- (void)reloadRow:(JARowModel *)row withAnimation:(UITableViewRowAnimation)animation;
 - (void)removeRowAtIndex:(NSUInteger)index;
 - (void)removeRowAtIndex:(NSUInteger)index andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
 - (void)removeAllRows;

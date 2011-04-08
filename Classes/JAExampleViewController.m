@@ -14,36 +14,41 @@
 @synthesize data = _data;
 
 - (void)dealloc {
-	[_data release], _data = nil;
-	[super dealloc];
+    [_data release], _data = nil;
+    [super dealloc];
 }
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	[_data release], _data = [NSMutableArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth",
-							  @"Sixth", @"Seventh", @"Eight", nil ];
-	[self layoutTable];
+    [super viewDidLoad];
+    [_data release], _data = [NSMutableArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth",
+            @"Sixth", @"Seventh", @"Eight", nil];
+    [self display];
 }
 
-- (void)layoutTable {
-	JASectionModel *section = [self.tableModel createSection];
-	section.headerText = @"Header Text";
-	section.footerText = @"Footer Text";
-	
-	JATableCellModel *row = nil;
-		
-	SetupCell setup = ^(UITableViewCell * cell, UITableView * view, NSIndexPath * indexPath, UIViewController * controller) {
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	};
-	for (NSString *item in self.data) {
-		row = [section createRowWithStyle:UITableViewCellStyleValue1];
-		row.setupCellBlock = setup;
-		row.text = item;
-		row.detailText = @"blah";
-		
-		row.drilldown = ^(JATableCellModel * model) {
-		};
-	}
+- (void)display {
+    JASectionModel *section = [self.tableModel createSection];
+    section.headerText = @"Header Text";
+    section.footerText = @"Footer Text";
+
+    JARowModel *row = nil;
+
+    SetupCell setup = ^(UITableViewCell *cell, UITableView *view, NSIndexPath *indexPath, UIViewController *controller) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    };
+    for (NSString *item in self.data) {
+        row = [section createRowWithStyle:UITableViewCellStyleValue1];
+        row.setupCellBlock = setup;
+        row.text = item;
+        row.detailText = @"blah";
+
+        row.drilldown = ^(JARowModel *model) {
+            NSString *msg = [NSString stringWithFormat:@"You clicked: %@!", item];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is easy." message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
+            [alert show];
+            [alert release];
+            [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+        };
+    }
 }
 
 @end

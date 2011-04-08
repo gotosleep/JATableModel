@@ -5,7 +5,7 @@
 //  Copyright 2010 Numjin. All rights reserved.
 //
 #import "JASectionModel.h"
-#import "JATableCellModel.h"
+#import "JARowModel.h"
 #import "JATableModel.h"
 
 @implementation JASectionModel
@@ -36,32 +36,32 @@
 #pragma mark -
 #pragma mark Row Methods
 
-- (JATableCellModel *)createRow {
+- (JARowModel *)createRow {
 	return [self createRowWithStyle:UITableViewCellStyleDefault];
 }
 
-- (JATableCellModel *)createRowWithStyle:(UITableViewCellStyle)style {
-	JATableCellModel *row = [[JATableCellModel alloc] init];
+- (JARowModel *)createRowWithStyle:(UITableViewCellStyle)style {
+	JARowModel *row = [[JARowModel alloc] init];
 	row.section = self;
 	row.style = style;
 	[self.rows addObject:row];
 	return [row autorelease];
 }
 
-- (JATableCellModel *)createRowAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation {
-	JATableCellModel *row = [self createRow];
+- (JARowModel *)createRowAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation {
+	JARowModel *row = [self createRow];
 	NSArray *path = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:([self.rows count]-1) inSection:self.sectionNum]];
 	[self.tableModel.tableView insertRowsAtIndexPaths:path withRowAnimation:animation];
 	return row;
 }
 
-- (JATableCellModel *)addRow:(JATableCellModel *)row {
+- (JARowModel *)addRow:(JARowModel *)row {
 	row.section = self;
 	[self.rows addObject:row];
 	return row;
 }
 
-- (JATableCellModel *)addRow:(JATableCellModel *)row andUpdateViewWithAnimation:(UITableViewRowAnimation)animation {
+- (JARowModel *)addRow:(JARowModel *)row andUpdateViewWithAnimation:(UITableViewRowAnimation)animation {
 	[self addRow:row];
 	NSArray *path = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:([self.rows count]-1) inSection:self.sectionNum]];
 	[self.tableModel.tableView insertRowsAtIndexPaths:path withRowAnimation:animation];
@@ -78,7 +78,7 @@
 	[self.tableModel.tableView reloadRowsAtIndexPaths:paths withRowAnimation:animation];
 }
 
-- (void)reloadRow:(JATableCellModel *)row withAnimation:(UITableViewRowAnimation)animation {
+- (void)reloadRow:(JARowModel *)row withAnimation:(UITableViewRowAnimation)animation {
 	int index = [self.rows indexOfObject:row];
 	if (index != NSNotFound) {
 		[self reloadRowAtIndex:index withAnimation:animation];

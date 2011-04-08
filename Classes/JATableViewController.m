@@ -7,7 +7,7 @@
 
 #import "JATableViewController.h"
 #import "JASectionHeaderView.h"
-#import "JATableCellModel.h"
+#import "JARowModel.h"
 #import "JASectionModel.h"
 
 @interface JATableViewController (PrivateMethods)
@@ -151,7 +151,7 @@
 	if (section) {
 		if (indexPath.row < [section.rows count]) {
 			id row = [section.rows objectAtIndex:indexPath.row];
-			if ([row isKindOfClass:[JATableCellModel class]]) {
+			if ([row isKindOfClass:[JARowModel class]]) {
 				return [row getCellWithTable:tableView indexPath:indexPath controller:self];
 			} 
 		}
@@ -164,8 +164,8 @@
 	if (section) {
 		if (indexPath.row < [section.rows count]) {
 			id row = [section.rows objectAtIndex:indexPath.row];
-			if ([row isKindOfClass:[JATableCellModel class]]) {
-				JATableCellModel *model = (JATableCellModel *)row;
+			if ([row isKindOfClass:[JARowModel class]]) {
+				JARowModel *model = (JARowModel *)row;
 				return [model heightInTable:tableView];
 			}
 		}
@@ -178,8 +178,8 @@
 	if (section) {
 		if (indexPath.row < [section.rows count]) {
 			id row = [section.rows objectAtIndex:indexPath.row];
-			if ([row isKindOfClass:[JATableCellModel class]]) {
-				JATableCellModel *model = (JATableCellModel *)row;
+			if ([row isKindOfClass:[JARowModel class]]) {
+				JARowModel *model = (JARowModel *)row;
 				if (model.enabled && model.drilldown) {
 					model.drilldown(model);
 				}
@@ -198,8 +198,8 @@
 		if (section) {
 			if (indexPath.row < [section.rows count]) {
 				id row = [section.rows objectAtIndex:indexPath.row];
-				if ([row isKindOfClass:[JATableCellModel class]]) {
-					JATableCellModel *model = (JATableCellModel *)row;
+				if ([row isKindOfClass:[JARowModel class]]) {
+					JARowModel *model = (JARowModel *)row;
 					if (model.commitEditingBlock) {
 						model.commitEditingBlock(tableView, editingStyle, indexPath);
 					}

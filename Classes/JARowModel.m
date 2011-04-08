@@ -5,11 +5,11 @@
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
-#import "JATableCellModel.h"
+#import "JARowModel.h"
 #import "JATableViewCell.h"
 #import "JASectionModel.h"
 
-@implementation JATableCellModel
+@implementation JARowModel
 
 @synthesize style = _style;
 @synthesize setupNewCellBlock, drilldown;
@@ -23,20 +23,20 @@
 }
 
 + (id)modelWithStyle:(UITableViewCellStyle)style {
-	JATableCellModel *model = [[self alloc] init];
+	JARowModel *model = [[self alloc] init];
 	model.style = style;
 	return [model autorelease];
 }
 
 + (id)modelWithText:(NSString *)text detailText:(NSString *)detailText {
-	JATableCellModel *model = [[self alloc] init];
+	JARowModel *model = [[self alloc] init];
 	model.text = text;
 	model.detailText = detailText;
 	return [model autorelease];
 }
 
 + (id)modelWithStyle:(UITableViewCellStyle)style text:(NSString *)text detailText:(NSString *)detailText {
-	JATableCellModel *model = [[self alloc] init];
+	JARowModel *model = [[self alloc] init];
 	model.style = style;
 	model.text = text;
 	model.detailText = detailText;
@@ -44,7 +44,7 @@
 }
 
 + (id)modelWithStyle:(UITableViewCellStyle)style text:(NSString *)text detailText:(NSString *)detailText setup:(SetupCell)block {
-	JATableCellModel *model = [[self alloc] init];
+	JARowModel *model = [[self alloc] init];
 	model.style = style;
 	model.text = text;
 	model.detailText = detailText;

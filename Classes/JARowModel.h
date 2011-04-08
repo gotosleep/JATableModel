@@ -7,26 +7,22 @@
 
 #import <Foundation/Foundation.h>
 
-@class JATableCellModel, JASectionModel;
+@class JARowModel, JASectionModel;
 
 typedef void (^SetupNewCell)(UITableViewCell *, UITableView *, NSIndexPath *, UIViewController *);
 typedef void (^SetupCell)(UITableViewCell *, UITableView *, NSIndexPath *, UIViewController *);
-typedef void (^Drilldown)(JATableCellModel *);
+typedef void (^Drilldown)(JARowModel *);
 typedef void (^CommitEditing)(UITableView *, UITableViewCellEditingStyle, NSIndexPath *);
 
-@interface JATableCellModel : NSObject {
+@interface JARowModel : NSObject {
 	UITableViewCellStyle _style;
 	NSString *_text, *_detailText;
-
 	SetupNewCell setupNewCellBlock;
 	SetupCell setupCellBlock;
 	Drilldown drilldown;
 	CommitEditing commitEditingBlock;
-
 	NSString *_setupBlockHash;
-
 	JASectionModel *_section;
-
 	BOOL _enabled;
 }
 
@@ -52,7 +48,6 @@ typedef void (^CommitEditing)(UITableView *, UITableViewCellEditingStyle, NSInde
 - (UITableViewCell *)createNewCellInTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller ident:(NSString *)ident;
 - (void)setupNewCell:(UITableViewCell *)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller;
 - (void)setupCell:(UITableViewCell*)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller;
-
 - (CGFloat)heightInTable:(UITableView *)tableView;
 
 #pragma mark Helper Methods

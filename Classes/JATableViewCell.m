@@ -18,7 +18,7 @@
     [super dealloc];
 }
 
-- (void)willDisplayModel:(JATableCellModel *)model {
+- (void)willDisplayModel:(JARowModel *)model {
 	self.detailTextLabel.backgroundColor = [UIColor clearColor];
 	self.textLabel.backgroundColor = [UIColor clearColor];
 }

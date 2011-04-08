@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JATableCellModel.h"
+#import "JARowModel.h"
 
 typedef void (^TextChanged)(UITextField *);
 
-@interface JAInputCellModel : JATableCellModel {
+@interface JAInputCellModel : JARowModel {
 	
 	TextChanged textChangedBlock;
 }

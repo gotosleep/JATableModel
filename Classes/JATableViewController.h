@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JASectionModel.h"
-#import "JATableCellModel.h"
+#import "JARowModel.h"
 #import "JATableModel.h"
 #import "JAInputCellModel.h"
 #import "JAInputTableViewCell.h"

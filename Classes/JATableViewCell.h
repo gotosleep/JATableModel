@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class JATableCellModel;
+@class JARowModel;
 
 @interface JATableViewCell : UITableViewCell {
 	UIActivityIndicatorView *_progress;
@@ -15,7 +15,7 @@
 
 @property (nonatomic, readonly, retain) UIActivityIndicatorView *progress;
 
-- (void)willDisplayModel:(JATableCellModel *)model;
+- (void)willDisplayModel:(JARowModel *)model;
 
 - (void)startProgress;
 - (void)endProgress;
