@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseTableCellModel.h"
+#import "JATableCellModel.h"
 
-@interface TableTextCellModel : BaseTableCellModel {
+@interface JATableTextCellModel : JATableCellModel {
 	UIFont *_font;
 }
 

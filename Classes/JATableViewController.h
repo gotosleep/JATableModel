@@ -6,23 +6,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SectionModel.h"
-#import "BaseTableCellModel.h"
-#import "TableModel.h"
-#import "InputCellModel.h"
-#import "InputTableCell.h"
+#import "JASectionModel.h"
+#import "JATableCellModel.h"
+#import "JATableModel.h"
+#import "JAInputCellModel.h"
+#import "JAInputTableViewCell.h"
 
-@class SectionModel;
+@class JASectionModel;
 
-@interface BaseTableViewController : UITableViewController {
+@interface JATableViewController : UITableViewController {
 	UIViewController *_returnVC;
 	BOOL _editable;
-	TableModel *_tableModel;
-	TableModel *_searchTableModel;
+	JATableModel *_tableModel;
+	JATableModel *_searchTableModel;
 }
 
-@property (nonatomic, retain) TableModel *tableModel;
-@property (nonatomic, retain) TableModel *searchTableModel;
+@property (nonatomic, retain) JATableModel *tableModel;
+@property (nonatomic, retain) JATableModel *searchTableModel;
 @property (nonatomic, retain) UIViewController *returnVC;
 @property (nonatomic) BOOL editable;
 

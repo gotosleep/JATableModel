@@ -5,10 +5,10 @@
 //  Copyright 2010 Numjin. All rights reserved.
 //
 
-#import "BaseTableCell.h"
+#import "JATableViewCell.h"
 #import "UIView+NumjinAdditions.h"
 
-@implementation BaseTableCell
+@implementation JATableViewCell
 
 @synthesize progress = _progress;
 
@@ -18,7 +18,7 @@
     [super dealloc];
 }
 
-- (void)willDisplayModel:(BaseTableCellModel *)model {
+- (void)willDisplayModel:(JATableCellModel *)model {
 	self.detailTextLabel.backgroundColor = [UIColor clearColor];
 	self.textLabel.backgroundColor = [UIColor clearColor];
 }

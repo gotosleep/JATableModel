@@ -7,7 +7,7 @@
 //
 
 #import "iOSTableModelAppDelegate.h"
-#import "ExampleViewController.h"
+#import "JAExampleViewController.h"
 
 @implementation iOSTableModelAppDelegate
 
@@ -24,7 +24,7 @@
 
     // Add the navigation controller's view to the window and display.
 	
-	UIViewController *root = [[ExampleViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	UIViewController *root = [[JAExampleViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	self.navigationController = [[[UINavigationController alloc] initWithRootViewController:root] autorelease];
 	[root release];
 	

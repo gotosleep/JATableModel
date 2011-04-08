@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseTableViewController.h"
+#import "JATableViewController.h"
 
-@interface ExampleViewController : BaseTableViewController {
+@interface JAExampleViewController : JATableViewController {
 	NSMutableArray *_data;
 }
 

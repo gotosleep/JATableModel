@@ -5,9 +5,9 @@
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
-#import "SectionHeader.h"
+#import "JASectionHeaderView.h"
 
-@implementation SectionHeader
+@implementation JASectionHeaderView
 
 @synthesize title = _title;
 

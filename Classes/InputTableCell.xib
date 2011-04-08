@@ -213,9 +213,9 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>InputTableCell</string>
+					<string>JAInputTableViewCell</string>
 					<string>UIResponder</string>
-					<string>InputTableCell</string>
+					<string>JAInputTableViewCell</string>
 					<string>{{0, 712}, {320, 44}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

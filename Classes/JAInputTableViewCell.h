@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseTableCell.h"
+#import "JATableViewCell.h"
 
-@interface InputTableCell : BaseTableCell {
+@interface JAInputTableViewCell : JATableViewCell {
 	UITableViewCell *_cell;
 	UILabel *_label;
 	UITextField *_textField;

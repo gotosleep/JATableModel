@@ -5,34 +5,34 @@
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
-#import "SectionHeader.h"
-#import "BaseTableCellModel.h"
-#import "SectionModel.h"
+#import "JATableViewController.h"
+#import "JASectionHeaderView.h"
+#import "JATableCellModel.h"
+#import "JASectionModel.h"
 
-@interface BaseTableViewController (PrivateMethods)
+@interface JATableViewController (PrivateMethods)
 
-- (TableModel *)tableModelForView:(UITableView *)view;
+- (JATableModel *)tableModelForView:(UITableView *)view;
 
 @end
 
-@implementation BaseTableViewController
+@implementation JATableViewController
 
 @synthesize returnVC = _returnVC, editable = _editable;
 @synthesize tableModel = _tableModel, searchTableModel = _searchTableModel;
 
 - (id)initWithStyle:(UITableViewStyle)style {
 	if (self = [super initWithStyle:style]) {
-		[_tableModel release], _tableModel = [[TableModel alloc] init];
-		[_searchTableModel release], _searchTableModel = [[TableModel alloc] init];
+		[_tableModel release], _tableModel = [[JATableModel alloc] init];
+		[_searchTableModel release], _searchTableModel = [[JATableModel alloc] init];
 	}
 	return self;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-		[_tableModel release], _tableModel = [[TableModel alloc] init];
-		[_searchTableModel release], _searchTableModel = [[TableModel alloc] init];
+		[_tableModel release], _tableModel = [[JATableModel alloc] init];
+		[_searchTableModel release], _searchTableModel = [[JATableModel alloc] init];
 	}
 	return self;
 }
@@ -59,7 +59,7 @@
 	return YES;
 }
 
-- (TableModel *)tableModelForView:(UITableView *)view {
+- (JATableModel *)tableModelForView:(UITableView *)view {
 	if (view == self.tableView) {
 		return self.tableModel;
 	} else {
@@ -75,7 +75,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionNum {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		return [section.rows count];
 	}
@@ -83,7 +83,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)sectionNum {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		return section.headerText;
 	}
@@ -91,7 +91,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)sectionNum {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		return section.footerText;
 	}
@@ -99,7 +99,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectionNum {	
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		return section.headerView;
 	}
@@ -107,7 +107,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)sectionNum {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		if (section.headerView) {
 			return section.headerView.frame.size.height;
@@ -123,7 +123,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)sectionNum {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		return section.footerView;
 	}
@@ -131,7 +131,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)sectionNum {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:sectionNum];
 	if (section) {
 		if (section.footerView) {
 			return section.footerView.frame.size.height;
@@ -147,11 +147,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
 	if (section) {
 		if (indexPath.row < [section.rows count]) {
 			id row = [section.rows objectAtIndex:indexPath.row];
-			if ([row isKindOfClass:[BaseTableCellModel class]]) {
+			if ([row isKindOfClass:[JATableCellModel class]]) {
 				return [row getCellWithTable:tableView indexPath:indexPath controller:self];
 			} 
 		}
@@ -160,12 +160,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
 	if (section) {
 		if (indexPath.row < [section.rows count]) {
 			id row = [section.rows objectAtIndex:indexPath.row];
-			if ([row isKindOfClass:[BaseTableCellModel class]]) {
-				BaseTableCellModel *model = (BaseTableCellModel *)row;
+			if ([row isKindOfClass:[JATableCellModel class]]) {
+				JATableCellModel *model = (JATableCellModel *)row;
 				return [model heightInTable:tableView];
 			}
 		}
@@ -174,12 +174,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
+	JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
 	if (section) {
 		if (indexPath.row < [section.rows count]) {
 			id row = [section.rows objectAtIndex:indexPath.row];
-			if ([row isKindOfClass:[BaseTableCellModel class]]) {
-				BaseTableCellModel *model = (BaseTableCellModel *)row;
+			if ([row isKindOfClass:[JATableCellModel class]]) {
+				JATableCellModel *model = (JATableCellModel *)row;
 				if (model.enabled && model.drilldown) {
 					model.drilldown(model);
 				}
@@ -194,12 +194,12 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		SectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
+		JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
 		if (section) {
 			if (indexPath.row < [section.rows count]) {
 				id row = [section.rows objectAtIndex:indexPath.row];
-				if ([row isKindOfClass:[BaseTableCellModel class]]) {
-					BaseTableCellModel *model = (BaseTableCellModel *)row;
+				if ([row isKindOfClass:[JATableCellModel class]]) {
+					JATableCellModel *model = (JATableCellModel *)row;
 					if (model.commitEditingBlock) {
 						model.commitEditingBlock(tableView, editingStyle, indexPath);
 					}

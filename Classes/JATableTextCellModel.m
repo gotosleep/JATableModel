@@ -5,10 +5,10 @@
 //  Copyright 2010 Numjin. All rights reserved.
 //
 
-#import "TableTextCellModel.h"
+#import "JATableTextCellModel.h"
 
 
-@implementation TableTextCellModel
+@implementation JATableTextCellModel
 
 @synthesize font = _font;
 

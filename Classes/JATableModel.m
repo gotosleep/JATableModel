@@ -5,10 +5,10 @@
 //  Copyright 2010 Numjin. All rights reserved.
 //
 
-#import "TableModel.h"
-#import "SectionModel.h"
+#import "JATableModel.h"
+#import "JASectionModel.h"
 
-@implementation TableModel
+@implementation JATableModel
 
 @synthesize sectionCount = _sectionCount;
 @synthesize tableView = _tableView;
@@ -30,27 +30,27 @@
 #pragma mark -
 #pragma mark Section Helpers
 
-- (SectionModel *)sectionAtIndex:(NSUInteger)index {
+- (JASectionModel *)sectionAtIndex:(NSUInteger)index {
 	if (index < _sectionCount) {
 		id section = [_sections objectForKey:[NSNumber numberWithInt:index]];
-		if ([section isKindOfClass:[SectionModel class]]) {
+		if ([section isKindOfClass:[JASectionModel class]]) {
 			return section;
 		}
 	}
 	return nil;
 }
 
-- (SectionModel *)createSection {
+- (JASectionModel *)createSection {
 	int index = _sectionCount++;
-	SectionModel *section = [[SectionModel alloc] initWithTableModel:self];
+	JASectionModel *section = [[JASectionModel alloc] initWithTableModel:self];
 	section.sectionNum = index;
 	[_sections setObject:section forKey:[NSNumber numberWithInt:index]];
 	return [section autorelease];
 }
 
-- (SectionModel *)createSectionAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation {
+- (JASectionModel *)createSectionAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation {
 	int index = _sectionCount;
-	SectionModel *section = [self createSection];
+	JASectionModel *section = [self createSection];
 	[self.tableView insertSections:[NSIndexSet indexSetWithIndex:index] withRowAnimation:animation];
 	return section;
 }
@@ -62,7 +62,7 @@
 }
 
 
-- (void)reloadSection:(SectionModel *)section withAnimation:(UITableViewRowAnimation)animation {
+- (void)reloadSection:(JASectionModel *)section withAnimation:(UITableViewRowAnimation)animation {
 	[self reloadSectionAtIndex:section.sectionNum withAnimation:animation];
 }
 

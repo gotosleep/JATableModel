@@ -5,10 +5,10 @@
 //  Copyright 2010 Numjin. All rights reserved.
 //
 
-#import "GroupedTableHeader.h"
+#import "JAGroupedTableHeader.h"
 
 
-@implementation GroupedTableHeader
+@implementation JAGroupedTableHeader
 
 @synthesize title = _title, button = _button;
 

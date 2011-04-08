@@ -7,14 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class BaseTableCellModel, SectionModel;
+@class JATableCellModel, JASectionModel;
 
 typedef void (^SetupNewCell)(UITableViewCell *, UITableView *, NSIndexPath *, UIViewController *);
 typedef void (^SetupCell)(UITableViewCell *, UITableView *, NSIndexPath *, UIViewController *);
-typedef void (^Drilldown)(BaseTableCellModel *);
+typedef void (^Drilldown)(JATableCellModel *);
 typedef void (^CommitEditing)(UITableView *, UITableViewCellEditingStyle, NSIndexPath *);
 
-@interface BaseTableCellModel : NSObject {
+@interface JATableCellModel : NSObject {
 	UITableViewCellStyle _style;
 	NSString *_text, *_detailText;
 
@@ -25,13 +25,13 @@ typedef void (^CommitEditing)(UITableView *, UITableViewCellEditingStyle, NSInde
 
 	NSString *_setupBlockHash;
 
-	SectionModel *_section;
+	JASectionModel *_section;
 
 	BOOL _enabled;
 }
 
 @property (nonatomic) BOOL enabled;
-@property (nonatomic, assign) SectionModel *section;
+@property (nonatomic, assign) JASectionModel *section;
 @property (nonatomic, copy) NSString *text, *detailText;
 @property (nonatomic) UITableViewCellStyle style;
 @property (nonatomic, copy) SetupNewCell setupNewCellBlock;

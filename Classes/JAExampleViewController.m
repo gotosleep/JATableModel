@@ -6,10 +6,10 @@
 //  Copyright 2010 Numjin. All rights reserved.
 //
 
-#import "ExampleViewController.h"
+#import "JAExampleViewController.h"
 
 
-@implementation ExampleViewController
+@implementation JAExampleViewController
 
 @synthesize data = _data;
 
@@ -26,11 +26,11 @@
 }
 
 - (void)layoutTable {
-	SectionModel *section = [self.tableModel createSection];
+	JASectionModel *section = [self.tableModel createSection];
 	section.headerText = @"Header Text";
 	section.footerText = @"Footer Text";
 	
-	BaseTableCellModel *row = nil;
+	JATableCellModel *row = nil;
 		
 	SetupCell setup = ^(UITableViewCell * cell, UITableView * view, NSIndexPath * indexPath, UIViewController * controller) {
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -41,7 +41,7 @@
 		row.text = item;
 		row.detailText = @"blah";
 		
-		row.drilldown = ^(BaseTableCellModel * model) {
+		row.drilldown = ^(JATableCellModel * model) {
 		};
 	}
 }

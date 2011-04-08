@@ -5,17 +5,17 @@
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
-#import "InputTableCell.h"
+#import "JAInputTableViewCell.h"
 
-@implementation InputTableCell
+@implementation JAInputTableViewCell
 
 @synthesize label = _label, textField = _textField, cell = _cell;
 
 - (id)init {
 	if (self = [super init]) {
 		[[NSBundle mainBundle] loadNibNamed:@"InputTableCell" owner:self options:nil];
-		if (self.cell && [self.cell isKindOfClass:[InputTableCell class]]) {
-			InputTableCell *input = (InputTableCell *)self.cell;
+		if (self.cell && [self.cell isKindOfClass:[JAInputTableViewCell class]]) {
+			JAInputTableViewCell *input = (JAInputTableViewCell *)self.cell;
 			input.label = self.label;
 			input.textField = self.textField;
 		}

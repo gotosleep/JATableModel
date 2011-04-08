@@ -5,11 +5,11 @@
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
-#import "BaseTableCellModel.h"
-#import "BaseTableCell.h"
-#import "SectionModel.h"
+#import "JATableCellModel.h"
+#import "JATableViewCell.h"
+#import "JASectionModel.h"
 
-@implementation BaseTableCellModel
+@implementation JATableCellModel
 
 @synthesize style = _style;
 @synthesize setupNewCellBlock, drilldown;
@@ -23,20 +23,20 @@
 }
 
 + (id)modelWithStyle:(UITableViewCellStyle)style {
-	BaseTableCellModel *model = [[self alloc] init];
+	JATableCellModel *model = [[self alloc] init];
 	model.style = style;
 	return [model autorelease];
 }
 
 + (id)modelWithText:(NSString *)text detailText:(NSString *)detailText {
-	BaseTableCellModel *model = [[self alloc] init];
+	JATableCellModel *model = [[self alloc] init];
 	model.text = text;
 	model.detailText = detailText;
 	return [model autorelease];
 }
 
 + (id)modelWithStyle:(UITableViewCellStyle)style text:(NSString *)text detailText:(NSString *)detailText {
-	BaseTableCellModel *model = [[self alloc] init];
+	JATableCellModel *model = [[self alloc] init];
 	model.style = style;
 	model.text = text;
 	model.detailText = detailText;
@@ -44,7 +44,7 @@
 }
 
 + (id)modelWithStyle:(UITableViewCellStyle)style text:(NSString *)text detailText:(NSString *)detailText setup:(SetupCell)block {
-	BaseTableCellModel *model = [[self alloc] init];
+	JATableCellModel *model = [[self alloc] init];
 	model.style = style;
 	model.text = text;
 	model.detailText = detailText;
@@ -84,8 +84,8 @@
 			self.setupNewCellBlock(cell, tableView, indexPath, controller);
 		}
 	}
-	if ([cell isKindOfClass:[BaseTableCell class]]) {
-		BaseTableCell *btc = (BaseTableCell *)cell;
+	if ([cell isKindOfClass:[JATableViewCell class]]) {
+		JATableViewCell *btc = (JATableViewCell *)cell;
 		if (btc.progress) {
 			[btc endProgress];
 		}
@@ -115,7 +115,7 @@ static NSString *CELL_IDENTIFIER = @"BaseTableCellModel";
 }
 
 - (UITableViewCell *)createNewCellInTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller ident:(NSString *)ident {
-	return [[[BaseTableCell alloc] initWithStyle:self.style reuseIdentifier:ident] autorelease];
+	return [[[JATableViewCell alloc] initWithStyle:self.style reuseIdentifier:ident] autorelease];
 }
 
 - (void)setupNewCell:(UITableViewCell *)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller {

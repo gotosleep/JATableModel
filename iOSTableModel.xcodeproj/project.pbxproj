@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CB7401126CF2AC003275AE /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EA126CF2AB003275AE /* SectionModel.m */; };
-		02CB7402126CF2AC003275AE /* BaseTableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EC126CF2AB003275AE /* BaseTableCellModel.m */; };
-		02CB7403126CF2AC003275AE /* InputCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EE126CF2AB003275AE /* InputCellModel.m */; };
-		02CB7404126CF2AC003275AE /* TableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F0126CF2AB003275AE /* TableModel.m */; };
-		02CB7405126CF2AC003275AE /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F2126CF2AB003275AE /* BaseTableViewController.m */; };
+		02CB7401126CF2AC003275AE /* JASectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EA126CF2AB003275AE /* JASectionModel.m */; };
+		02CB7402126CF2AC003275AE /* JATableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EC126CF2AB003275AE /* JATableCellModel.m */; };
+		02CB7403126CF2AC003275AE /* JAInputCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73EE126CF2AB003275AE /* JAInputCellModel.m */; };
+		02CB7404126CF2AC003275AE /* JATableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F0126CF2AB003275AE /* JATableModel.m */; };
+		02CB7405126CF2AC003275AE /* JATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F2126CF2AB003275AE /* JATableViewController.m */; };
 		02CB7406126CF2AC003275AE /* InputTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CB73F4126CF2AB003275AE /* InputTableCell.xib */; };
-		02CB7407126CF2AC003275AE /* InputTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F6126CF2AC003275AE /* InputTableCell.m */; };
-		02CB7408126CF2AC003275AE /* BaseTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F8126CF2AC003275AE /* BaseTableCell.m */; };
-		02CB7409126CF2AC003275AE /* SectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73FA126CF2AC003275AE /* SectionHeader.m */; };
-		02CB740A126CF2AC003275AE /* GroupedTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73FD126CF2AC003275AE /* GroupedTableHeader.m */; };
-		02CB7419126E06A7003275AE /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB7418126E06A7003275AE /* ExampleViewController.m */; };
+		02CB7407126CF2AC003275AE /* JAInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F6126CF2AC003275AE /* JAInputTableViewCell.m */; };
+		02CB7408126CF2AC003275AE /* JATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73F8126CF2AC003275AE /* JATableViewCell.m */; };
+		02CB7409126CF2AC003275AE /* JASectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73FA126CF2AC003275AE /* JASectionHeaderView.m */; };
+		02CB740A126CF2AC003275AE /* JAGroupedTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB73FD126CF2AC003275AE /* JAGroupedTableHeader.m */; };
+		02CB7419126E06A7003275AE /* JAExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB7418126E06A7003275AE /* JAExampleViewController.m */; };
 		02CB743A126E0BB6003275AE /* UIView+NumjinAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB7439126E0BB6003275AE /* UIView+NumjinAdditions.m */; };
 		1D3623260D0F684500981E51 /* iOSTableModelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iOSTableModelAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -26,32 +26,32 @@
 		28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28D3F202112F7DC200FD0661 /* iOSTableModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* iOSTableModel.xcdatamodeld */; };
-		95076F9D134FA03A0033F13E /* TableTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95076F9C134FA03A0033F13E /* TableTextCellModel.m */; };
+		95076F9D134FA03A0033F13E /* JATableTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95076F9C134FA03A0033F13E /* JATableTextCellModel.m */; };
 		95B5CAA2134FA3C200AF3EAB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B5CAA1134FA3C200AF3EAB /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02CB73E9126CF2AB003275AE /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
-		02CB73EA126CF2AB003275AE /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
-		02CB73EB126CF2AB003275AE /* BaseTableCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableCellModel.h; sourceTree = "<group>"; };
-		02CB73EC126CF2AB003275AE /* BaseTableCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableCellModel.m; sourceTree = "<group>"; };
-		02CB73ED126CF2AB003275AE /* InputCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCellModel.h; sourceTree = "<group>"; };
-		02CB73EE126CF2AB003275AE /* InputCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCellModel.m; sourceTree = "<group>"; };
-		02CB73EF126CF2AB003275AE /* TableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableModel.h; sourceTree = "<group>"; };
-		02CB73F0126CF2AB003275AE /* TableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableModel.m; sourceTree = "<group>"; };
-		02CB73F1126CF2AB003275AE /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
-		02CB73F2126CF2AB003275AE /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		02CB73E9126CF2AB003275AE /* JASectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASectionModel.h; sourceTree = "<group>"; };
+		02CB73EA126CF2AB003275AE /* JASectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASectionModel.m; sourceTree = "<group>"; };
+		02CB73EB126CF2AB003275AE /* JATableCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableCellModel.h; sourceTree = "<group>"; };
+		02CB73EC126CF2AB003275AE /* JATableCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JATableCellModel.m; sourceTree = "<group>"; };
+		02CB73ED126CF2AB003275AE /* JAInputCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAInputCellModel.h; sourceTree = "<group>"; };
+		02CB73EE126CF2AB003275AE /* JAInputCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAInputCellModel.m; sourceTree = "<group>"; };
+		02CB73EF126CF2AB003275AE /* JATableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableModel.h; sourceTree = "<group>"; };
+		02CB73F0126CF2AB003275AE /* JATableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JATableModel.m; sourceTree = "<group>"; };
+		02CB73F1126CF2AB003275AE /* JATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableViewController.h; sourceTree = "<group>"; };
+		02CB73F2126CF2AB003275AE /* JATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JATableViewController.m; sourceTree = "<group>"; };
 		02CB73F4126CF2AB003275AE /* InputTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTableCell.xib; sourceTree = "<group>"; };
-		02CB73F5126CF2AB003275AE /* InputTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputTableCell.h; sourceTree = "<group>"; };
-		02CB73F6126CF2AC003275AE /* InputTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputTableCell.m; sourceTree = "<group>"; };
-		02CB73F7126CF2AC003275AE /* BaseTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableCell.h; sourceTree = "<group>"; };
-		02CB73F8126CF2AC003275AE /* BaseTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableCell.m; sourceTree = "<group>"; };
-		02CB73F9126CF2AC003275AE /* SectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeader.h; sourceTree = "<group>"; };
-		02CB73FA126CF2AC003275AE /* SectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeader.m; sourceTree = "<group>"; };
-		02CB73FC126CF2AC003275AE /* GroupedTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupedTableHeader.h; sourceTree = "<group>"; };
-		02CB73FD126CF2AC003275AE /* GroupedTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupedTableHeader.m; sourceTree = "<group>"; };
-		02CB7417126E06A7003275AE /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
-		02CB7418126E06A7003275AE /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
+		02CB73F5126CF2AB003275AE /* JAInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAInputTableViewCell.h; sourceTree = "<group>"; };
+		02CB73F6126CF2AC003275AE /* JAInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAInputTableViewCell.m; sourceTree = "<group>"; };
+		02CB73F7126CF2AC003275AE /* JATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableViewCell.h; sourceTree = "<group>"; };
+		02CB73F8126CF2AC003275AE /* JATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JATableViewCell.m; sourceTree = "<group>"; };
+		02CB73F9126CF2AC003275AE /* JASectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASectionHeaderView.h; sourceTree = "<group>"; };
+		02CB73FA126CF2AC003275AE /* JASectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASectionHeaderView.m; sourceTree = "<group>"; };
+		02CB73FC126CF2AC003275AE /* JAGroupedTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAGroupedTableHeader.h; sourceTree = "<group>"; };
+		02CB73FD126CF2AC003275AE /* JAGroupedTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAGroupedTableHeader.m; sourceTree = "<group>"; };
+		02CB7417126E06A7003275AE /* JAExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAExampleViewController.h; sourceTree = "<group>"; };
+		02CB7418126E06A7003275AE /* JAExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAExampleViewController.m; sourceTree = "<group>"; };
 		02CB7438126E0BB6003275AE /* UIView+NumjinAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NumjinAdditions.h"; sourceTree = "<group>"; };
 		02CB7439126E0BB6003275AE /* UIView+NumjinAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NumjinAdditions.m"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,8 +65,8 @@
 		28A0AAE50D9B0CCF005BE974 /* iOSTableModel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSTableModel_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iOSTableModel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOSTableModel-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		95076F9B134FA03A0033F13E /* TableTextCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTextCellModel.h; sourceTree = "<group>"; };
-		95076F9C134FA03A0033F13E /* TableTextCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTextCellModel.m; sourceTree = "<group>"; };
+		95076F9B134FA03A0033F13E /* JATableTextCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JATableTextCellModel.h; sourceTree = "<group>"; };
+		95076F9C134FA03A0033F13E /* JATableTextCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JATableTextCellModel.m; sourceTree = "<group>"; };
 		95B5CAA1134FA3C200AF3EAB /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -90,18 +90,18 @@
 			children = (
 				02CB7437126E0BA1003275AE /* Categories */,
 				02CB73F3126CF2AB003275AE /* Views */,
-				02CB73E9126CF2AB003275AE /* SectionModel.h */,
-				02CB73EA126CF2AB003275AE /* SectionModel.m */,
-				02CB73EB126CF2AB003275AE /* BaseTableCellModel.h */,
-				02CB73EC126CF2AB003275AE /* BaseTableCellModel.m */,
-				95076F9B134FA03A0033F13E /* TableTextCellModel.h */,
-				95076F9C134FA03A0033F13E /* TableTextCellModel.m */,
-				02CB73ED126CF2AB003275AE /* InputCellModel.h */,
-				02CB73EE126CF2AB003275AE /* InputCellModel.m */,
-				02CB73EF126CF2AB003275AE /* TableModel.h */,
-				02CB73F0126CF2AB003275AE /* TableModel.m */,
-				02CB73F1126CF2AB003275AE /* BaseTableViewController.h */,
-				02CB73F2126CF2AB003275AE /* BaseTableViewController.m */,
+				02CB73E9126CF2AB003275AE /* JASectionModel.h */,
+				02CB73EA126CF2AB003275AE /* JASectionModel.m */,
+				02CB73EB126CF2AB003275AE /* JATableCellModel.h */,
+				02CB73EC126CF2AB003275AE /* JATableCellModel.m */,
+				95076F9B134FA03A0033F13E /* JATableTextCellModel.h */,
+				95076F9C134FA03A0033F13E /* JATableTextCellModel.m */,
+				02CB73ED126CF2AB003275AE /* JAInputCellModel.h */,
+				02CB73EE126CF2AB003275AE /* JAInputCellModel.m */,
+				02CB73EF126CF2AB003275AE /* JATableModel.h */,
+				02CB73F0126CF2AB003275AE /* JATableModel.m */,
+				02CB73F1126CF2AB003275AE /* JATableViewController.h */,
+				02CB73F2126CF2AB003275AE /* JATableViewController.m */,
 			);
 			name = "Table Model";
 			sourceTree = "<group>";
@@ -111,12 +111,12 @@
 			children = (
 				02CB73FB126CF2AC003275AE /* Section Headers */,
 				02CB73F4126CF2AB003275AE /* InputTableCell.xib */,
-				02CB73F5126CF2AB003275AE /* InputTableCell.h */,
-				02CB73F6126CF2AC003275AE /* InputTableCell.m */,
-				02CB73F7126CF2AC003275AE /* BaseTableCell.h */,
-				02CB73F8126CF2AC003275AE /* BaseTableCell.m */,
-				02CB73F9126CF2AC003275AE /* SectionHeader.h */,
-				02CB73FA126CF2AC003275AE /* SectionHeader.m */,
+				02CB73F5126CF2AB003275AE /* JAInputTableViewCell.h */,
+				02CB73F6126CF2AC003275AE /* JAInputTableViewCell.m */,
+				02CB73F7126CF2AC003275AE /* JATableViewCell.h */,
+				02CB73F8126CF2AC003275AE /* JATableViewCell.m */,
+				02CB73F9126CF2AC003275AE /* JASectionHeaderView.h */,
+				02CB73FA126CF2AC003275AE /* JASectionHeaderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -124,8 +124,8 @@
 		02CB73FB126CF2AC003275AE /* Section Headers */ = {
 			isa = PBXGroup;
 			children = (
-				02CB73FC126CF2AC003275AE /* GroupedTableHeader.h */,
-				02CB73FD126CF2AC003275AE /* GroupedTableHeader.m */,
+				02CB73FC126CF2AC003275AE /* JAGroupedTableHeader.h */,
+				02CB73FD126CF2AC003275AE /* JAGroupedTableHeader.m */,
 			);
 			name = "Section Headers";
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 				02CB73E8126CF2AB003275AE /* Table Model */,
 				1D3623240D0F684500981E51 /* iOSTableModelAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iOSTableModelAppDelegate.m */,
-				02CB7417126E06A7003275AE /* ExampleViewController.h */,
-				02CB7418126E06A7003275AE /* ExampleViewController.m */,
+				02CB7417126E06A7003275AE /* JAExampleViewController.h */,
+				02CB7418126E06A7003275AE /* JAExampleViewController.m */,
 				95B5CAA1134FA3C200AF3EAB /* MainWindow.xib */,
 			);
 			path = Classes;
@@ -269,18 +269,18 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iOSTableModelAppDelegate.m in Sources */,
 				28D3F202112F7DC200FD0661 /* iOSTableModel.xcdatamodeld in Sources */,
-				02CB7401126CF2AC003275AE /* SectionModel.m in Sources */,
-				02CB7402126CF2AC003275AE /* BaseTableCellModel.m in Sources */,
-				02CB7403126CF2AC003275AE /* InputCellModel.m in Sources */,
-				02CB7404126CF2AC003275AE /* TableModel.m in Sources */,
-				02CB7405126CF2AC003275AE /* BaseTableViewController.m in Sources */,
-				02CB7407126CF2AC003275AE /* InputTableCell.m in Sources */,
-				02CB7408126CF2AC003275AE /* BaseTableCell.m in Sources */,
-				02CB7409126CF2AC003275AE /* SectionHeader.m in Sources */,
-				02CB740A126CF2AC003275AE /* GroupedTableHeader.m in Sources */,
-				02CB7419126E06A7003275AE /* ExampleViewController.m in Sources */,
+				02CB7401126CF2AC003275AE /* JASectionModel.m in Sources */,
+				02CB7402126CF2AC003275AE /* JATableCellModel.m in Sources */,
+				02CB7403126CF2AC003275AE /* JAInputCellModel.m in Sources */,
+				02CB7404126CF2AC003275AE /* JATableModel.m in Sources */,
+				02CB7405126CF2AC003275AE /* JATableViewController.m in Sources */,
+				02CB7407126CF2AC003275AE /* JAInputTableViewCell.m in Sources */,
+				02CB7408126CF2AC003275AE /* JATableViewCell.m in Sources */,
+				02CB7409126CF2AC003275AE /* JASectionHeaderView.m in Sources */,
+				02CB740A126CF2AC003275AE /* JAGroupedTableHeader.m in Sources */,
+				02CB7419126E06A7003275AE /* JAExampleViewController.m in Sources */,
 				02CB743A126E0BB6003275AE /* UIView+NumjinAdditions.m in Sources */,
-				95076F9D134FA03A0033F13E /* TableTextCellModel.m in Sources */,
+				95076F9D134FA03A0033F13E /* JATableTextCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

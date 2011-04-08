@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SectionHeader : UIView {
+@interface JASectionHeaderView : UIView {
 	UILabel *_title;
 	CGSize _padding;
 }

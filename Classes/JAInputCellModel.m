@@ -5,10 +5,10 @@
 //  Copyright 2009 Numjin. All rights reserved.
 //
 
-#import "InputCellModel.h"
-#import "InputTableCell.h"
+#import "JAInputCellModel.h"
+#import "JAInputTableViewCell.h"
 
-@implementation InputCellModel
+@implementation JAInputCellModel
 
 @synthesize textChangedBlock;
 
@@ -21,7 +21,7 @@
 #pragma mark TableCellModelProtocol Methods
 
 - (UITableViewCell *)createNewCellInTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller ident:(NSString *)ident {
-	InputTableCell *input = [[[InputTableCell alloc] init] autorelease];	
+	JAInputTableViewCell *input = [[[JAInputTableViewCell alloc] init] autorelease];
 	return input.cell;
 }
 
@@ -32,8 +32,8 @@
 
 - (void)setupCell:(UITableViewCell*)cell inTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath controller:(UIViewController *)controller {
 	//[super setupCell:cell inTable:tableView indexPath:indexPath controller:controller];
-	if ([cell isKindOfClass:[InputTableCell class]]) {
-		InputTableCell *input = (InputTableCell *)cell;
+	if ([cell isKindOfClass:[JAInputTableViewCell class]]) {
+		JAInputTableViewCell *input = (JAInputTableViewCell *)cell;
 		input.label.text = self.text;
 		[input.textField removeTarget:nil action:@selector(inputCellTextFieldChanged:) forControlEvents:UIControlEventEditingChanged];
 		[input.textField addTarget:self action:@selector(inputCellTextFieldChanged:) forControlEvents:UIControlEventEditingChanged];

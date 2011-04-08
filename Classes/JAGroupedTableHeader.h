@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GroupedTableHeader : UIView {
+@interface JAGroupedTableHeader : UIView {
 	UILabel *_title;
 	UIButton *_button;
 }
