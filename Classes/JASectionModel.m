@@ -7,6 +7,7 @@
 #import "JASectionModel.h"
 #import "JARowModel.h"
 #import "JATableModel.h"
+#import "JATableViewCell.h"
 
 @implementation JASectionModel
 
@@ -53,6 +54,17 @@
 	NSArray *path = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:([self.rows count]-1) inSection:self.sectionNum]];
 	[self.tableModel.tableView insertRowsAtIndexPaths:path withRowAnimation:animation];
 	return row;
+}
+
+- (JARowModel *)createProgressRow {
+    JARowModel *row = [self createRowWithStyle:UITableViewCellStyleValue1];
+    row.setupCellBlock = ^(UITableViewCell *cell, UITableView *view, NSIndexPath *indexPath, UIViewController *controller) {
+        if ([cell isKindOfClass:[JATableViewCell class]]) {
+            JATableViewCell *ja = (JATableViewCell *)cell;
+            [ja startProgress];
+        }
+    };
+    return row;
 }
 
 - (JARowModel *)addRow:(JARowModel *)row {

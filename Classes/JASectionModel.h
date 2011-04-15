@@ -30,6 +30,7 @@
 - (JARowModel *)createRow;
 - (JARowModel *)createRowAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
 - (JARowModel *)createRowWithStyle:(UITableViewCellStyle)style;
+- (JARowModel *)createProgressRow;
 - (JARowModel *)addRow:(JARowModel *)row;
 - (JARowModel *)addRow:(JARowModel *)row andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
 - (void)reloadWithAnimation:(UITableViewRowAnimation)animation;
