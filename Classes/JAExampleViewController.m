@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_data release], _data = [NSMutableArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth",
-            @"Sixth", @"Seventh", @"Eight", nil];
+    [_data release], _data = [[NSMutableArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth",
+            @"Sixth", @"Seventh", @"Eighth", nil] retain];
     [self display];
 }
 
