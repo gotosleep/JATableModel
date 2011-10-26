@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		952CF50E1458C5FD001EF374 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CF50D1458C5FD001EF374 /* UIKit.framework */; };
+		952CF5101458C5FD001EF374 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CF50F1458C5FD001EF374 /* Foundation.framework */; };
+		952CF5121458C5FD001EF374 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952CF5111458C5FD001EF374 /* CoreGraphics.framework */; };
+		952CF5181458C5FD001EF374 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 952CF5161458C5FD001EF374 /* InfoPlist.strings */; };
+		952CF51A1458C5FD001EF374 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CF5191458C5FD001EF374 /* main.m */; };
+		952CF51E1458C5FD001EF374 /* JAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CF51D1458C5FD001EF374 /* JAAppDelegate.m */; };
+		952CF5321458C725001EF374 /* JAExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CF5311458C725001EF374 /* JAExampleViewController.m */; };
+		957322241458CA9300734B62 /* InputTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9573220D1458CA9300734B62 /* InputTableCell.xib */; };
+		957322251458CA9300734B62 /* JAGroupedTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9573220F1458CA9300734B62 /* JAGroupedTableHeader.m */; };
+		957322261458CA9300734B62 /* JAInputCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322111458CA9300734B62 /* JAInputCellModel.m */; };
+		957322271458CA9300734B62 /* JAInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322131458CA9300734B62 /* JAInputTableViewCell.m */; };
+		957322281458CA9300734B62 /* JARowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322151458CA9300734B62 /* JARowModel.m */; };
+		957322291458CA9300734B62 /* JASectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322171458CA9300734B62 /* JASectionHeaderView.m */; };
+		9573222A1458CA9300734B62 /* JASectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322191458CA9300734B62 /* JASectionModel.m */; };
+		9573222B1458CA9300734B62 /* JATableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9573221B1458CA9300734B62 /* JATableModel.m */; };
+		9573222C1458CA9300734B62 /* JATableTextCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9573221D1458CA9300734B62 /* JATableTextCellModel.m */; };
+		9573222D1458CA9300734B62 /* JATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9573221F1458CA9300734B62 /* JATableViewCell.m */; };
+		9573222E1458CA9300734B62 /* JATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322211458CA9300734B62 /* JATableViewController.m */; };
+		9573222F1458CA9300734B62 /* UIView+NumjinAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 957322231458CA9300734B62 /* UIView+NumjinAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		952CF5091458C5FD001EF374 /* BasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		952CF50D1458C5FD001EF374 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		952CF50F1458C5FD001EF374 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		952CF5111458C5FD001EF374 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		952CF5151458C5FD001EF374 /* BasicExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicExample-Info.plist"; sourceTree = "<group>"; };
+		952CF5171458C5FD001EF374 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		952CF5191458C5FD001EF374 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		952CF51B1458C5FD001EF374 /* BasicExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicExample-Prefix.pch"; sourceTree = "<group>"; };
+		952CF51C1458C5FD001EF374 /* JAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAAppDelegate.h; sourceTree = "<group>"; };
+		952CF51D1458C5FD001EF374 /* JAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAAppDelegate.m; sourceTree = "<group>"; };
+		952CF5301458C725001EF374 /* JAExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAExampleViewController.h; sourceTree = "<group>"; };
+		952CF5311458C725001EF374 /* JAExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAExampleViewController.m; sourceTree = "<group>"; };
+		9573220D1458CA9300734B62 /* InputTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputTableCell.xib; path = ../../JATableModel/Classes/InputTableCell.xib; sourceTree = "<group>"; };
+		9573220E1458CA9300734B62 /* JAGroupedTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAGroupedTableHeader.h; path = ../../JATableModel/Classes/JAGroupedTableHeader.h; sourceTree = "<group>"; };
+		9573220F1458CA9300734B62 /* JAGroupedTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAGroupedTableHeader.m; path = ../../JATableModel/Classes/JAGroupedTableHeader.m; sourceTree = "<group>"; };
+		957322101458CA9300734B62 /* JAInputCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAInputCellModel.h; path = ../../JATableModel/Classes/JAInputCellModel.h; sourceTree = "<group>"; };
+		957322111458CA9300734B62 /* JAInputCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAInputCellModel.m; path = ../../JATableModel/Classes/JAInputCellModel.m; sourceTree = "<group>"; };
+		957322121458CA9300734B62 /* JAInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAInputTableViewCell.h; path = ../../JATableModel/Classes/JAInputTableViewCell.h; sourceTree = "<group>"; };
+		957322131458CA9300734B62 /* JAInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAInputTableViewCell.m; path = ../../JATableModel/Classes/JAInputTableViewCell.m; sourceTree = "<group>"; };
+		957322141458CA9300734B62 /* JARowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JARowModel.h; path = ../../JATableModel/Classes/JARowModel.h; sourceTree = "<group>"; };
+		957322151458CA9300734B62 /* JARowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARowModel.m; path = ../../JATableModel/Classes/JARowModel.m; sourceTree = "<group>"; };
+		957322161458CA9300734B62 /* JASectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JASectionHeaderView.h; path = ../../JATableModel/Classes/JASectionHeaderView.h; sourceTree = "<group>"; };
+		957322171458CA9300734B62 /* JASectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASectionHeaderView.m; path = ../../JATableModel/Classes/JASectionHeaderView.m; sourceTree = "<group>"; };
+		957322181458CA9300734B62 /* JASectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JASectionModel.h; path = ../../JATableModel/Classes/JASectionModel.h; sourceTree = "<group>"; };
+		957322191458CA9300734B62 /* JASectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASectionModel.m; path = ../../JATableModel/Classes/JASectionModel.m; sourceTree = "<group>"; };
+		9573221A1458CA9300734B62 /* JATableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JATableModel.h; path = ../../JATableModel/Classes/JATableModel.h; sourceTree = "<group>"; };
+		9573221B1458CA9300734B62 /* JATableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JATableModel.m; path = ../../JATableModel/Classes/JATableModel.m; sourceTree = "<group>"; };
+		9573221C1458CA9300734B62 /* JATableTextCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JATableTextCellModel.h; path = ../../JATableModel/Classes/JATableTextCellModel.h; sourceTree = "<group>"; };
+		9573221D1458CA9300734B62 /* JATableTextCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JATableTextCellModel.m; path = ../../JATableModel/Classes/JATableTextCellModel.m; sourceTree = "<group>"; };
+		9573221E1458CA9300734B62 /* JATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JATableViewCell.h; path = ../../JATableModel/Classes/JATableViewCell.h; sourceTree = "<group>"; };
+		9573221F1458CA9300734B62 /* JATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JATableViewCell.m; path = ../../JATableModel/Classes/JATableViewCell.m; sourceTree = "<group>"; };
+		957322201458CA9300734B62 /* JATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JATableViewController.h; path = ../../JATableModel/Classes/JATableViewController.h; sourceTree = "<group>"; };
+		957322211458CA9300734B62 /* JATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JATableViewController.m; path = ../../JATableModel/Classes/JATableViewController.m; sourceTree = "<group>"; };
+		957322221458CA9300734B62 /* UIView+NumjinAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+NumjinAdditions.h"; path = "../../JATableModel/Classes/UIView+NumjinAdditions.h"; sourceTree = "<group>"; };
+		957322231458CA9300734B62 /* UIView+NumjinAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+NumjinAdditions.m"; path = "../../JATableModel/Classes/UIView+NumjinAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		952CF5061458C5FD001EF374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952CF50E1458C5FD001EF374 /* UIKit.framework in Frameworks */,
+				952CF5101458C5FD001EF374 /* Foundation.framework in Frameworks */,
+				952CF5121458C5FD001EF374 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		952CF4FE1458C5FD001EF374 = {
+			isa = PBXGroup;
+			children = (
+				9573220B1458CA6F00734B62 /* JATableModel */,
+				952CF5131458C5FD001EF374 /* BasicExample */,
+				952CF50C1458C5FD001EF374 /* Frameworks */,
+				952CF50A1458C5FD001EF374 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		952CF50A1458C5FD001EF374 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				952CF5091458C5FD001EF374 /* BasicExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		952CF50C1458C5FD001EF374 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				952CF50D1458C5FD001EF374 /* UIKit.framework */,
+				952CF50F1458C5FD001EF374 /* Foundation.framework */,
+				952CF5111458C5FD001EF374 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		952CF5131458C5FD001EF374 /* BasicExample */ = {
+			isa = PBXGroup;
+			children = (
+				952CF5301458C725001EF374 /* JAExampleViewController.h */,
+				952CF5311458C725001EF374 /* JAExampleViewController.m */,
+				952CF51C1458C5FD001EF374 /* JAAppDelegate.h */,
+				952CF51D1458C5FD001EF374 /* JAAppDelegate.m */,
+				952CF5141458C5FD001EF374 /* Supporting Files */,
+			);
+			path = BasicExample;
+			sourceTree = "<group>";
+		};
+		952CF5141458C5FD001EF374 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				952CF5151458C5FD001EF374 /* BasicExample-Info.plist */,
+				952CF5161458C5FD001EF374 /* InfoPlist.strings */,
+				952CF5191458C5FD001EF374 /* main.m */,
+				952CF51B1458C5FD001EF374 /* BasicExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9573220B1458CA6F00734B62 /* JATableModel */ = {
+			isa = PBXGroup;
+			children = (
+				9573220D1458CA9300734B62 /* InputTableCell.xib */,
+				9573220E1458CA9300734B62 /* JAGroupedTableHeader.h */,
+				9573220F1458CA9300734B62 /* JAGroupedTableHeader.m */,
+				957322101458CA9300734B62 /* JAInputCellModel.h */,
+				957322111458CA9300734B62 /* JAInputCellModel.m */,
+				957322121458CA9300734B62 /* JAInputTableViewCell.h */,
+				957322131458CA9300734B62 /* JAInputTableViewCell.m */,
+				957322141458CA9300734B62 /* JARowModel.h */,
+				957322151458CA9300734B62 /* JARowModel.m */,
+				957322161458CA9300734B62 /* JASectionHeaderView.h */,
+				957322171458CA9300734B62 /* JASectionHeaderView.m */,
+				957322181458CA9300734B62 /* JASectionModel.h */,
+				957322191458CA9300734B62 /* JASectionModel.m */,
+				9573221A1458CA9300734B62 /* JATableModel.h */,
+				9573221B1458CA9300734B62 /* JATableModel.m */,
+				9573221C1458CA9300734B62 /* JATableTextCellModel.h */,
+				9573221D1458CA9300734B62 /* JATableTextCellModel.m */,
+				9573221E1458CA9300734B62 /* JATableViewCell.h */,
+				9573221F1458CA9300734B62 /* JATableViewCell.m */,
+				957322201458CA9300734B62 /* JATableViewController.h */,
+				957322211458CA9300734B62 /* JATableViewController.m */,
+				957322221458CA9300734B62 /* UIView+NumjinAdditions.h */,
+				957322231458CA9300734B62 /* UIView+NumjinAdditions.m */,
+			);
+			name = JATableModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		952CF5081458C5FD001EF374 /* BasicExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952CF5271458C5FD001EF374 /* Build configuration list for PBXNativeTarget "BasicExample" */;
+			buildPhases = (
+				952CF5051458C5FD001EF374 /* Sources */,
+				952CF5061458C5FD001EF374 /* Frameworks */,
+				952CF5071458C5FD001EF374 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicExample;
+			productName = BasicExample;
+			productReference = 952CF5091458C5FD001EF374 /* BasicExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		952CF5001458C5FD001EF374 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 952CF5031458C5FD001EF374 /* Build configuration list for PBXProject "BasicExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 952CF4FE1458C5FD001EF374;
+			productRefGroup = 952CF50A1458C5FD001EF374 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				952CF5081458C5FD001EF374 /* BasicExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		952CF5071458C5FD001EF374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952CF5181458C5FD001EF374 /* InfoPlist.strings in Resources */,
+				957322241458CA9300734B62 /* InputTableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		952CF5051458C5FD001EF374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952CF51A1458C5FD001EF374 /* main.m in Sources */,
+				952CF51E1458C5FD001EF374 /* JAAppDelegate.m in Sources */,
+				952CF5321458C725001EF374 /* JAExampleViewController.m in Sources */,
+				957322251458CA9300734B62 /* JAGroupedTableHeader.m in Sources */,
+				957322261458CA9300734B62 /* JAInputCellModel.m in Sources */,
+				957322271458CA9300734B62 /* JAInputTableViewCell.m in Sources */,
+				957322281458CA9300734B62 /* JARowModel.m in Sources */,
+				957322291458CA9300734B62 /* JASectionHeaderView.m in Sources */,
+				9573222A1458CA9300734B62 /* JASectionModel.m in Sources */,
+				9573222B1458CA9300734B62 /* JATableModel.m in Sources */,
+				9573222C1458CA9300734B62 /* JATableTextCellModel.m in Sources */,
+				9573222D1458CA9300734B62 /* JATableViewCell.m in Sources */,
+				9573222E1458CA9300734B62 /* JATableViewController.m in Sources */,
+				9573222F1458CA9300734B62 /* UIView+NumjinAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		952CF5161458C5FD001EF374 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952CF5171458C5FD001EF374 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		952CF5251458C5FD001EF374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		952CF5261458C5FD001EF374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		952CF5281458C5FD001EF374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicExample/BasicExample-Prefix.pch";
+				INFOPLIST_FILE = "BasicExample/BasicExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/JATableModel-dpdoihcjjcwsgkcvvuerdrgvldyb/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		952CF5291458C5FD001EF374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicExample/BasicExample-Prefix.pch";
+				INFOPLIST_FILE = "BasicExample/BasicExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/JATableModel-dpdoihcjjcwsgkcvvuerdrgvldyb/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		952CF5031458C5FD001EF374 /* Build configuration list for PBXProject "BasicExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952CF5251458C5FD001EF374 /* Debug */,
+				952CF5261458C5FD001EF374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952CF5271458C5FD001EF374 /* Build configuration list for PBXNativeTarget "BasicExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952CF5281458C5FD001EF374 /* Debug */,
+				952CF5291458C5FD001EF374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 952CF5001458C5FD001EF374 /* Project object */;
+}
