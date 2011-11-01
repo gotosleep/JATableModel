@@ -1,14 +1,15 @@
-This project aims to provide an object oriented abstraction for the underlying data in a UITableView.
+This project aims to provide an object oriented abstraction for the underlying data in a `UITableView`.
 
-The UITableView is broken down into three basic data pieces:
- - the table, represented by JATableModel
- - sections in the table, represented by JASectionModel
- - and finally rows in a section, represented by JARowModel
+The `UITableView` is broken down into three basic data pieces:
+ - the table, represented by `JATableModel`
+ - sections in the table, represented by `JASectionModel`
+ - and finally rows in a section, represented by `JARowModel`
 
-A custom UITableViewController subclass, JATableViewController, handles mapping UITableViewDelegate & UITableViewDataSource methods to the appropriate models. JATableModel makes creating tables in iOS quick and easy.
+A custom `UITableViewController` subclass, `JATableViewController`, handles mapping `UITableViewDelegate` & `UITableViewDataSource` methods to the appropriate models. `JATableModel` makes creating tables in iOS quick and easy.
 
 How about an example? (full example is included in the library)
 
+``` objc
 //
 //  ExampleViewController.h
 //  iOSTableModel
@@ -79,3 +80,4 @@ How about an example? (full example is included in the library)
 }
 
 @end
+```
