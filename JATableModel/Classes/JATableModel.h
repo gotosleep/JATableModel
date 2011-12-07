@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 
 @class JASectionModel;
+@class JARowModel;
 
 @interface JATableModel : NSObject {
 	NSMutableDictionary *_sections;
@@ -27,5 +28,7 @@
 - (void)removeSectionAtIndex:(NSUInteger)index andUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
 - (int)removeAllSections;
 - (int)removeAllSectionsAndUpdateViewWithAnimation:(UITableViewRowAnimation)animation;
+
+- (JARowModel *)rowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

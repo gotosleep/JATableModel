@@ -218,8 +218,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+	if ([cell isKindOfClass:[JATableViewCell class]]) {
+		JATableViewCell *jaCell = (JATableViewCell *)cell;
+		JARowModel *row = [[self tableModelForView:tableView] rowAtIndexPath:indexPath];
+		if (row) {
+			[jaCell willDisplayModel:row];
+		}
+	}
 }
 
 #pragma mark -

@@ -7,6 +7,7 @@
 
 #import "JATableModel.h"
 #import "JASectionModel.h"
+#import "JARowModel.h"
 
 @implementation JATableModel
 
@@ -82,7 +83,6 @@
 	}
 }
 
-
 - (int)removeAllSections {
 	int removedCount = _sectionCount;
 	[_sections removeAllObjects];
@@ -101,6 +101,19 @@
 		[indexes release];
 	}
 	return removedCount;
+}
+
+- (JARowModel *)rowAtIndexPath:(NSIndexPath *)indexPath {
+	JASectionModel *section = [self sectionAtIndex:indexPath.section];
+	if (section) {
+		if (indexPath.row < [section.rows count]) {
+			id row = [section.rows objectAtIndex:indexPath.row];
+			if ([row isKindOfClass:[JARowModel class]]) {
+				return row;
+			}
+		}
+	}
+	return nil;
 }
 
 @end
