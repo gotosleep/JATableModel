@@ -19,27 +19,28 @@
 @implementation JATableViewController
 
 @synthesize tableModel = _tableModel, searchTableModel = _searchTableModel;
+@synthesize editable = _editable;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     if ((self = [super initWithStyle:style])) {
-        [_tableModel release], _tableModel = [[JATableModel alloc] init];
-        [_searchTableModel release], _searchTableModel = [[JATableModel alloc] init];
+        _tableModel = [[JATableModel alloc] init];
+        _searchTableModel = [[JATableModel alloc] init];
     }
     return self;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        [_tableModel release], _tableModel = [[JATableModel alloc] init];
-        [_searchTableModel release], _searchTableModel = [[JATableModel alloc] init];
+        _tableModel = [[JATableModel alloc] init];
+        _searchTableModel = [[JATableModel alloc] init];
     }
     return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [_tableModel release], _tableModel = [[JATableModel alloc] init];
-    [_searchTableModel release], _searchTableModel = [[JATableModel alloc] init];
+    _tableModel = [[JATableModel alloc] init];
+    _searchTableModel = [[JATableModel alloc] init];
 }
 
 - (void)dealloc {

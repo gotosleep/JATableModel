@@ -22,7 +22,6 @@
 
 @property (nonatomic, retain) JATableModel *tableModel;
 @property (nonatomic, retain) JATableModel *searchTableModel;
-@property (nonatomic, retain) UIViewController *returnVC;
 @property (nonatomic) BOOL editable;
 
 #pragma mark -
