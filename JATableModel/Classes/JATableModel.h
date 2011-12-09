@@ -16,7 +16,7 @@
 	UITableView *_tableView;
 }
 
-@property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, assign) UITableView *tableView;
 @property (nonatomic, readonly) int sectionCount;
 
 - (JASectionModel *)sectionAtIndex:(NSUInteger)index;

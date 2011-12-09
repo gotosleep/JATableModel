@@ -22,9 +22,8 @@
 }
 
 - (void)dealloc {
-	self.tableView = nil;
-	[_sections release];
-	_sections = nil;
+	_tableView = nil;
+	[_sections release], _sections = nil;
 	[super dealloc];
 }
 

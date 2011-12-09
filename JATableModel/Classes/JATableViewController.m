@@ -18,7 +18,6 @@
 
 @implementation JATableViewController
 
-@synthesize returnVC = _returnVC, editable = _editable;
 @synthesize tableModel = _tableModel, searchTableModel = _searchTableModel;
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -44,9 +43,10 @@
 }
 
 - (void)dealloc {
+	_tableModel.tableView = nil;
     [_tableModel release], _tableModel = nil;
+	_searchTableModel.tableView = nil;
     [_searchTableModel release], _searchTableModel = nil;
-    [_returnVC release], _returnVC = nil;
     [super dealloc];
 }
 
@@ -56,6 +56,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableModel.tableView = self.tableView;
+}
+
+- (void)viewDidUnload {
+	[super viewDidUnload];
+	self.tableModel.tableView = nil;
+	self.searchTableModel.tableView = nil;
+	[self.tableModel removeAllSections];
 }
 
 #pragma mark -

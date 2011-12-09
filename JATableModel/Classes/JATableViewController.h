@@ -15,7 +15,6 @@
 @class JASectionModel;
 
 @interface JATableViewController : UITableViewController {
-	UIViewController *_returnVC;
 	BOOL _editable;
 	JATableModel *_tableModel;
 	JATableModel *_searchTableModel;
