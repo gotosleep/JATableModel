@@ -23,12 +23,12 @@
 		self.button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 		width = self.button.frame.size.width;
 		height = self.button.frame.size.height;
-		y = floor((frame.size.height - height)/2);
-		x = frame.size.width - width - 10;
+		y = (CGFloat)floor((frame.size.height - height)/2.0f);
+		x = frame.size.width - width - 10.0f;
 		self.button.frame = CGRectMake(x, y, width, height);
 		[self addSubview:self.button];
 		
-		x = 18;
+		x = 18.0f;
 		width = frame.size.width - x;
 		self.title = [[[UILabel alloc] initWithFrame:CGRectMake(x, 0, width, frame.size.height)] autorelease];
 		self.title.backgroundColor = [UIColor clearColor];
