@@ -48,6 +48,11 @@
     [_tableModel release], _tableModel = nil;
 	_searchTableModel.tableView = nil;
     [_searchTableModel release], _searchTableModel = nil;
+
+	// niling out the dataSource because the base class doesn't appear to do so
+	// As a result in some cases the dataSource will be called (during rotations)
+	// and it will result in a crash
+	self.tableView.dataSource = nil;
     [super dealloc];
 }
 
