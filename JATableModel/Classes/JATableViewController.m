@@ -241,13 +241,6 @@
 }
 
 #pragma mark -
-#pragma mark Displaying
-
-- (void)display {
-//to be implemented by subclasses
-}
-
-#pragma mark -
 #pragma mark Searching
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView {

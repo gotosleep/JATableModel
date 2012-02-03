@@ -19,32 +19,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_data release], _data = [[NSMutableArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth",
-            @"Sixth", @"Seventh", @"Eighth", nil] retain];
-    [self display];
-}
+	
+	// Creating a __block variable for self is required to avoid retain cycles
+	__block typeof(self) blockSelf = self;
 
-- (void)display {
-    JASectionModel *section = [self.tableModel createSection];
+	[_data release], _data = [[NSMutableArray alloc] initWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth",
+							  @"Sixth", @"Seventh", @"Eighth", nil];
+	
+	// Setup the section
+	JASectionModel *section = [self.tableModel createSection];
     section.headerText = @"Header Text";
     section.footerText = @"Footer Text";
-
+	
     JARowModel *row = nil;
-
+	
+	// This setup block can be reused for each row
     SetupCell setup = ^(UITableViewCell *cell, UITableView *view, NSIndexPath *indexPath, UIViewController *controller) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     };
+	
+	// Add rows to the section
     for (NSString *item in self.data) {
         row = [section createRowWithStyle:UITableViewCellStyleValue1];
         row.setupCellBlock = setup;
         row.text = item;
-        row.detailText = @"blah";
+        row.detailText = @"detail";
+		
+		// Pass a block to be invoked when this cell is selected
         row.drilldown = ^(JARowModel *model) {
             NSString *msg = [NSString stringWithFormat:@"You clicked: %@!", item];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is easy." message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
             [alert show];
             [alert release];
-            [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+            [blockSelf.tableView deselectRowAtIndexPath:[blockSelf.tableView indexPathForSelectedRow] animated:YES];
         };
     }
 }

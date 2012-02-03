@@ -25,11 +25,6 @@
 @property (nonatomic) BOOL editable;
 
 #pragma mark -
-#pragma mark Displaying
-
-- (void)display;
-
-#pragma mark -
 #pragma mark Searching
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView;
