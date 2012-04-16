@@ -86,7 +86,7 @@
     
     self.tableView.dataSource = nil;
     self.tableView.delegate = nil;
-    [_tableView release], _tableView = nil;
+    self.tableView = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
