@@ -20,19 +20,26 @@
 
 @synthesize tableModel = _tableModel, searchTableModel = _searchTableModel;
 @synthesize editable = _editable;
+@synthesize tableView = _tableView;
+@synthesize style = _style;
+@synthesize clearsSelectionOnViewWillAppear = _clearsSelectionOnViewWillAppear;
 
 - (id)initWithStyle:(UITableViewStyle)style {
-    if ((self = [super initWithStyle:style])) {
+    if ((self = [super init])) {
+        _style = style;
         _tableModel = [[JATableModel alloc] init];
         _searchTableModel = [[JATableModel alloc] init];
+        _clearsSelectionOnViewWillAppear = YES;
     }
     return self;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        _style = UITableViewStylePlain;
         _tableModel = [[JATableModel alloc] init];
         _searchTableModel = [[JATableModel alloc] init];
+        _clearsSelectionOnViewWillAppear = YES;
     }
     return self;
 }
@@ -43,21 +50,27 @@
     _searchTableModel = [[JATableModel alloc] init];
 }
 
-- (void)dealloc {
+- (void)dealloc {    
 	_tableModel.tableView = nil;
     [_tableModel release], _tableModel = nil;
 	_searchTableModel.tableView = nil;
     [_searchTableModel release], _searchTableModel = nil;
-
-	// niling out the dataSource because the base class doesn't appear to do so
-	// As a result in some cases the dataSource will be called (during rotations)
-	// and it will result in a crash
-	self.tableView.dataSource = nil;
+    
+    _tableView.dataSource = nil;
+    _tableView.delegate = nil;
+    [_tableView release], _tableView = nil;
     [super dealloc];
 }
 
 #pragma mark -
 #pragma mark UIViewController Methods
+
+- (void)loadView {
+    _tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:self.style];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    self.view = _tableView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,9 +79,21 @@
 
 - (void)viewDidUnload {
 	[super viewDidUnload];
+        
 	self.tableModel.tableView = nil;
 	self.searchTableModel.tableView = nil;
 	[self.tableModel removeAllSections];
+    
+    self.tableView.dataSource = nil;
+    self.tableView.delegate = nil;
+    [_tableView release], _tableView = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (self.clearsSelectionOnViewWillAppear && self.tableView.indexPathForSelectedRow) {
+        [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:animated];
+    }
 }
 
 #pragma mark -

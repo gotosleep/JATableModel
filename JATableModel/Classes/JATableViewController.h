@@ -14,15 +14,23 @@
 
 @class JASectionModel;
 
-@interface JATableViewController : UITableViewController {
+@interface JATableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
 	BOOL _editable;
 	JATableModel *_tableModel;
 	JATableModel *_searchTableModel;
+    UITableView *_tableView;
+    UITableViewStyle _style;
+    BOOL _clearsSelectionOnViewWillAppear;
 }
 
+@property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) JATableModel *tableModel;
 @property (nonatomic, retain) JATableModel *searchTableModel;
 @property (nonatomic) BOOL editable;
+@property (nonatomic, readonly) UITableViewStyle style;
+@property (nonatomic) BOOL clearsSelectionOnViewWillAppear;
+
+- (id)initWithStyle:(UITableViewStyle)style;
 
 #pragma mark -
 #pragma mark Searching
