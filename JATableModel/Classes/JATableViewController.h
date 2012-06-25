@@ -32,6 +32,8 @@
 
 - (id)initWithStyle:(UITableViewStyle)style;
 
+- (JATableModel *)tableModelForView:(UITableView *)view;
+
 #pragma mark -
 #pragma mark Searching
 
