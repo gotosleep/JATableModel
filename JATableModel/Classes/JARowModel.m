@@ -150,7 +150,7 @@ static NSString *CELL_IDENTIFIER = @"BaseTableCellModel";
 	 **************************************************************************/
 	[_setupBlockHash release];
 	if (block) {
-		 _setupBlockHash = [[NSString stringWithFormat:@"%qu", [block hash]] retain];
+		 _setupBlockHash = [[NSString stringWithFormat:@"%u", [block hash]] retain];
 //		NSLog(@"Block Address: %@, %qu", block, [block hash]);
 	} else {
 		_setupBlockHash = nil;
