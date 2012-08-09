@@ -191,16 +191,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *result = nil;
     JASectionModel *section = [[self tableModelForView:tableView] sectionAtIndex:indexPath.section];
     if (section) {
         if (indexPath.row < [section.rows count]) {
             id row = [section.rows objectAtIndex:indexPath.row];
             if ([row isKindOfClass:[JARowModel class]]) {
-                return [row getCellWithTable:tableView indexPath:indexPath controller:self];
+                result = [row getCellWithTable:tableView indexPath:indexPath controller:self];
             }
         }
     }
-    return nil;
+    if (!result) {
+        result = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"JATableViewThrowawayCell"] autorelease];
+    }
+    return result;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
